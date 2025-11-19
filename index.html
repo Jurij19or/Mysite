@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>SOLID TRUST j.d.o.o.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            font-size: 22px;
+            line-height: 1.6;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            padding: 20px 40px;
+            z-index: 1000;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 30px;
+            font-size: 22px;
+        }
+        section {
+            padding: 120px 10% 120px;
+        }
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .overlay {
+            background: rgba(0,0,0,0.55);
+            position: absolute;
+            top:0; left:0; width:100%; height:100%;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero button {
+            padding: 20px 40px;
+            background: #0078ff;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+        .about {
+            display: flex;
+            align-items: center;
+            color: #000;
+            background: #f7f7f7;
+        }
+        .about img {
+            width: 45%;
+            margin-left: 5%;
+            border-radius: 10px;
+        }
+        .about-text {
+            width: 50%;
+            color: #000;
+            font-size: 22px;
+        }
+        h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: #000;
+        }
+        .services, .advantages, .process {
+            color: #000;
+            background: #fff;
+        }
+        .services-item, .adv-item, .proc-item {
+            margin-bottom: 50px;
+        }
+        .contacts {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169') center/cover no-repeat;
+            position: relative;
+            color: #fff;
+        }
+        .contacts .overlay {
+            background: rgba(0,0,0,0.6);
+        }
+        .contacts-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 120px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+        }
+        button.submit {
+            background: #0078ff;
+            padding: 20px 40px;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="#hero">Početna</a>
+        <a href="#about">O nama</a>
+        <a href="#services">Usluge</a>
+        <a href="#advantages">Prednosti</a>
+        <a href="#process">Naš proces</a>
+        <a href="#contacts">Kontakt</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>SOLID TRUST j.d.o.o.</h1>
+        <p>Vaš pouzdan partner za tehničko savjetovanje, IT podršku i razvoj digitalnih rješenja koja rastu zajedno s vašim poslovanjem. 
+           Nudimo jasne, praktične i održive usluge prilagođene malim i srednjim poduzećima.</p>
+        <button onclick="location.href='#contacts'">Kontakti</button>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="about-text">
+        <h2>Tko smo mi</h2>
+        <p>SOLID TRUST j.d.o.o. je savjetodavna i tehnološka kompanija koja pomaže poduzećima da uspostave stabilan, siguran i učinkovit IT sustav. 
+           Naš fokus je na razumijevanju stvarnih potreba klijenata i pružanju rješenja koja donose mjerljive rezultate. 
+           Od tehničkog planiranja do svakodnevne soft podrške – naš pristup temelji se na transparentnosti, pouzdanosti i stručnosti. 
+           Kroz godine rada razvili smo metode koje omogućuju brzu implementaciju i dugoročno održavanje sustava. 
+           Naš tim kombinira iskustvo, praktične vještine i inovativno razmišljanje kako bismo postigli maksimalnu vrijednost za svakog klijenta.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="About">
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <h2>Što nudimo</h2>
+    
+    <div class="services-item">
+        <h3>Tehničko i poslovno savjetovanje</h3>
+        <p>Pomažemo tvrtkama da optimiziraju svoj IT sustav, sigurnosne procese i tehničku infrastrukturu. 
+           Analiziramo zatečeno stanje i predlažemo jasne, izvedive korake za poboljšanje efikasnosti. 
+           Naše smjernice omogućuju dugoročnu stabilnost i jasnu tehnološku strategiju.</p>
+    </div>
+
+    <div class="services-item">
+        <h3>IT i soft podrška</h3>
+        <p>Rješavamo svakodnevne tehničke izazove malih poduzeća i brinemo da sustavi rade bez prekida. 
+           Od instalacija, sigurnosnih provjera do održavanja – preuzimamo kompletnu brigu o vašim IT potrebama. 
+           Dostupni smo za brzu pomoć i kontinuiranu suradnju.</p>
+    </div>
+
+    <div class="services-item">
+        <h3>Programiranje i razvoj prilagođenih rješenja</h3>
+        <p>Razvijamo softver i interne alate koji pojednostavljuju poslovne procese. 
+           Naša rješenja prilagođena su manjem poslovanju koje želi povećati produktivnost uz minimalne troškove. 
+           Fokusiramo se na funkcionalnost, jednostavnost korištenja i dugoročno održavanje.</p>
+    </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="advantages" id="advantages">
+    <h2>Zašto surađivati s nama</h2>
+
+    <div class="adv-item">
+        <h3>Praktična rješenja, ne komplicirane teorije</h3>
+        <p>Naš pristup temelji se na stvarnim potrebama malih poduzeća. Nudimo konkretna rješenja koja odmah daju rezultate.</p>
+    </div>
+
+    <div class="adv-item">
+        <h3>Potpuna transparentnost i pouzdanost</h3>
+        <p>Naša komunikacija je jasna, a procesi jednostavni. Uvijek unaprijed znate što radimo i zašto to radimo.</p>
+    </div>
+
+    <div class="adv-item">
+        <h3>Dugoročna podrška</h3>
+        <p>Ne rješavamo samo trenutne probleme, već gradimo sustave koji ostaju stabilni godinama.</p>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+    <h2>Kako izgleda naš proces</h2>
+
+    <div class="proc-item">
+        <h3>1. Analiza i planiranje</h3>
+        <p>Detaljno proučavamo vaše poslovanje i trenutnu tehničku infrastrukturu kako bismo definirali prioritetne potrebe.</p>
+    </div>
+
+    <div class="proc-item">
+        <h3>2. Implementacija rješenja</h3>
+        <p>Postavljamo, konfiguriramo i razvijamo sustave koji rješavaju konkretne izazove i poboljšavaju učinkovitost.</p>
+    </div>
+
+    <div class="proc-item">
+        <h3>3. Kontinuirana podrška</h3>
+        <p>Preuzimamo brigu o održavanju, sigurnosti i ažuriranjima, te osiguravamo brzu reakciju na svaku potrebu.</p>
+    </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts" id="contacts">
+    <div class="overlay"></div>
+    <div class="contacts-content">
+        <h2>Kontaktirajte nas</h2>
+        <p>Ako želite pouzdanog partnera koji će pojednostaviti vaše tehničke procese i osigurati stabilno poslovanje — javite nam se. 
+           Naš tim će vam rado pružiti sve potrebne informacije i pomoći vam u prvom koraku prema boljoj IT strukturi.</p>
+        <p><strong>Email:</strong> office@solidtrust.services<br>
+           <strong>Adresa:</strong> Svetice 24, 10000 Zagreb</p>
+
+        <form>
+            <input type="text" placeholder="Vaše ime">
+            <input type="email" placeholder="Vaš email">
+            <textarea rows="5" placeholder="Vaša poruka"></textarea>
+            <button class="submit" type="submit">Pošalji poruku</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
